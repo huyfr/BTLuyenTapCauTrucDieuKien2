@@ -1,16 +1,16 @@
-function calculate() {
-    let input = parseFloat(document.getElementById("input").value);
-    let option = parseFloat(document.getElementById("option").value);
-    let interest = input*(option/100);
+function interest()
+{
+    let inputMoneys = parseInt(document.getElementById("inputMoneys").value);
+    let inputMonths = parseInt(document.getElementById("inputMonths").value);
+    let result = parseInt(document.getElementById("inputMoneys").value);
+    for (let i=0; i<inputMonths; i++)
+    {
+        inputMoneys=inputMoneys+inputMoneys*0.3/100;
+    }
+    result=inputMoneys-result;
+    document.getElementById("result").innerHTML="So tien lai sau "+inputMonths+" :"+formatNumber(result);
+}
 
-    if (input<0)
-    {
-        alert("Vui long nhap lai");
-        document.getElementById("input").value = "";
-        document.getElementById("result").innerHTML = "";
-    }
-    else
-    {
-        document.getElementById("result").innerHTML = "So tien lai: "+interest;
-    }
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 }

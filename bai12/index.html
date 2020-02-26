@@ -6,32 +6,20 @@
     <script src="interest.js"></script>
 </head>
 <body>
-    <div>
-        <table>
-            <tr>
-                <td><input type="number" id="input" value=""></td>
-                <td>
-                    <select id="option" style="height: 23px">
-                        <option value="4.65">1 Tháng (4.65%/năm)</option>
-                        <option value="4.65">2 Tháng (4.65%/năm)</option>
-                        <option value="4.65">3 Tháng (4.65%/năm)</option>
-                        <option value="4.65">4 Tháng (4.65%/năm)</option>
-                        <option value="4.65">5 Tháng (4.65%/năm)</option>
-                        <option value="6.8">6 Tháng (6.8%/năm)</option>
-                        <option value="6.1">7 Tháng (6.1%/năm)</option>
-                        <option value="6.1">8 Tháng (6.1%/năm)</option>
-                        <option value="6.1">9 Tháng (6.1%/năm)</option>
-                        <option value="6.1">10 Tháng (6.1%/năm)</option>
-                        <option value="6.1">11 Tháng (6.1%/năm)</option>
-                        <option value="6.9">12 Tháng (6.1%/năm)</option>
-                    </select>
-                </td>
-                <td><button type="button" onclick="calculate()">Calculate</button></td>
-            </tr>
-            <tr>
-                <td><p id="result"></p></td>
-            </tr>
-        </table>
-    </div>
+<div>
+    <table>
+        <tr>
+            <td><input type="number" id="inputMoneys" placeholder="Nhap so tien"></td>
+            <td><input type="number" id="inputMonths" placeholder="Nhap so thang"></td>
+            <td>Lãi suất 1 tháng 0.3%</td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="interest()">Calculate</button></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <p id="result">abc</p>
+</div>
 </body>
 </html>
